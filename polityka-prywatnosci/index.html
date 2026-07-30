@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Polityka prywatności — AlwaysInTouch</title>
+<meta name="description" content="Polityka prywatności aplikacji AlwaysInTouch — komunikatora działającego bez serwera, bez kont użytkowników i bez narzędzi analitycznych.">
+<link rel="canonical" href="https://haskelar.pl/polityka-prywatnosci/">
+<link rel="alternate" hreflang="pl" href="https://haskelar.pl/polityka-prywatnosci/">
+<link rel="alternate" hreflang="en" href="https://haskelar.pl/privacy/">
+<link rel="alternate" hreflang="x-default" href="https://haskelar.pl/privacy/">
+<link rel="stylesheet" href="/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔗</text></svg>">
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="/">AlwaysInTouch</a>
+    <span class="lang">
+      <a href="/polityka-prywatnosci/" aria-current="true">PL</a>
+      <a href="/privacy/">EN</a>
+    </span>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <h1>Polityka prywatności</h1>
+    <p class="meta">
+      <strong>Aplikacja</strong>: AlwaysInTouch (<code>pl.haskelar.alwaysintouch</code>)<br>
+      <strong>Ostatnia aktualizacja</strong>: 30 lipca 2026
+    </p>
+
+    <div class="card tldr">
+      <p><strong>W skrócie.</strong> AlwaysInTouch jest komunikatorem <strong>bez serwera</strong>.
+      Rozmowy, zdjęcia, pinezki na mapie i wyniki gier nie przechodzą przez naszą
+      infrastrukturę, bo takiej infrastruktury nie ma. Urządzenia łączą się bezpośrednio
+      ze sobą — po sieci lokalnej z hotspotu jednego z telefonów albo przez Bluetooth
+      Low Energy.</p>
+      <p><strong>Nie prowadzimy kont użytkowników.</strong> Nie znamy Twojego imienia,
+      adresu e-mail ani numeru telefonu, bo nigdzie o nie nie pytamy.</p>
+    </div>
+
+    <h2>1. Dane, które zostają na Twoim urządzeniu</h2>
+    <p>Poniższe dane są zapisywane <strong>wyłącznie lokalnie</strong>, w bazie zaszyfrowanej
+    mechanizmem SQLCipher, której klucz przechowywany jest w systemowym magazynie kluczy
+    Androida (Keystore):</p>
+    <ul>
+      <li>treść wiadomości tekstowych,</li>
+      <li>zdjęcia wysłane i odebrane w grupie,</li>
+      <li>nazwa wyświetlana, którą sam podajesz przy pierwszym uruchomieniu,</li>
+      <li>pinezki i notatki na mapie,</li>
+      <li>wyniki gier,</li>
+      <li>dziennik diagnostyczny (informacje techniczne o połączeniu — patrz §5).</li>
+    </ul>
+    <p>Kopia zapasowa Androida jest dla tej aplikacji <strong>wyłączona</strong>
+    (<code>allowBackup="false"</code>), więc dane te nie trafiają na Dysk Google.</p>
+    <p>Odinstalowanie aplikacji usuwa je nieodwracalnie. Nie mamy ich kopii i nie jesteśmy
+    w stanie ich odzyskać.</p>
+
+    <h2>2. Dane przekazywane innym uczestnikom grupy</h2>
+    <p>Kiedy dołączasz do grupy, pozostali jej uczestnicy otrzymują — <strong>bezpośrednio
+    z Twojego urządzenia na ich urządzenia</strong> — to, co im wysyłasz:</p>
+    <ul>
+      <li>wiadomości i zdjęcia,</li>
+      <li>nazwę wyświetlaną,</li>
+      <li>Twoją pozycję na mapie grupy, jeśli włączysz jej udostępnianie,</li>
+      <li>pinezki i wyniki gier.</li>
+    </ul>
+    <p>Ruch między urządzeniami jest szyfrowany. Nie przechodzi przez żaden serwer
+    pośredniczący ani przez internet — odbywa się w obrębie sieci lokalnej lub łącza
+    Bluetooth.</p>
+    <p>Uczestnicy grupy to osoby, które sam zaprosisz lub których zaproszenie przyjmiesz.
+    Nie mamy wglądu w skład grupy ani w treść tego, co w niej krąży.</p>
+
+    <h2>3. Uprawnienia i po co są używane</h2>
+    <div class="scroll">
+    <table>
+      <thead>
+        <tr><th>Uprawnienie</th><th>Do czego służy</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Lokalizacja</strong> (dokładna i przybliżona)</td>
+          <td>Wymagana przez Androida do postawienia lokalnego hotspotu
+          (<code>LocalOnlyHotspot</code>) — bez niej sesja grupowa nie ruszy. Dodatkowo
+          pokazuje Twoją pozycję na mapie grupy, jeśli sam to włączysz.</td>
+        </tr>
+        <tr>
+          <td><strong>Aparat</strong></td>
+          <td>Skanowanie kodu QR przy dołączaniu do grupy oraz robienie zdjęć wysyłanych
+          do grupy.</td>
+        </tr>
+        <tr>
+          <td><strong>Bluetooth</strong> (skanowanie, ogłaszanie, łączenie)</td>
+          <td>Wykrywanie urządzeń w pobliżu i przekazanie danych sieci przy dołączaniu
+          oraz odbudowie zerwanego połączenia.</td>
+        </tr>
+        <tr>
+          <td><strong>Wi-Fi i urządzenia w pobliżu</strong></td>
+          <td>Postawienie hotspotu przez urządzenie prowadzące sesję i dołączenie do niego
+          przez pozostałe.</td>
+        </tr>
+        <tr>
+          <td><strong>Powiadomienia</strong></td>
+          <td>Informowanie o nowych wiadomościach i o stanie sesji.</td>
+        </tr>
+        <tr>
+          <td><strong>Usługa pierwszoplanowa / wyłączenie optymalizacji baterii</strong></td>
+          <td>Utrzymanie połączenia z urządzeniami w grupie, gdy ekran jest zgaszony.
+          Bez tego system usypia proces i grupa traci łączność.</td>
+        </tr>
+        <tr>
+          <td><strong>Internet</strong></td>
+          <td>Wyłącznie trzy zastosowania opisane w §4.</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    <p>Lokalizacja <strong>nie jest wysyłana</strong> do nas ani do żadnej strony trzeciej.
+    Trafia wyłącznie do uczestników Twojej grupy i tylko wtedy, gdy sam włączysz
+    udostępnianie pozycji.</p>
+
+    <h2>4. Jedyne połączenia z internetem</h2>
+    <p>Aplikacja jest zaprojektowana do działania bez internetu. Łączy się z siecią
+    w dokładnie trzech sytuacjach, wszystkich zwykle <strong>przed wyjazdem</strong>:</p>
+    <ol>
+      <li><strong>RevenueCat</strong> — obsługa zakupu i weryfikacja aktywnej subskrypcji Pro.
+      RevenueCat otrzymuje anonimowy identyfikator urządzenia (w postaci
+      <code>$RCAnonymousID:…</code>), informacje o zakupie oraz standardowe dane techniczne
+      połączenia. <strong>Nie przekazujemy tam Twojego imienia, treści rozmów ani
+      lokalizacji.</strong> Polityka prywatności RevenueCat:
+      <a href="https://www.revenuecat.com/privacy" rel="noopener">revenuecat.com/privacy</a></li>
+      <li><strong>Nominatim (OpenStreetMap)</strong> — wyszukiwanie miejsc w kreatorze map
+      offline. Wysyłane jest wpisane przez Ciebie hasło wyszukiwania.
+      <a href="https://osmfoundation.org/wiki/Privacy_Policy" rel="noopener">osmfoundation.org</a></li>
+      <li><strong>Serwer kafli mapowych</strong> — pobranie paczki mapy offline wybranego
+      obszaru.</li>
+    </ol>
+    <p>Poza tymi trzema przypadkami aplikacja nie wysyła niczego do internetu.
+    W szczególności <strong>nie zawiera reklam ani narzędzi analitycznych</strong>.</p>
+
+    <h2>5. Dziennik diagnostyczny</h2>
+    <p>Aplikacja prowadzi lokalny dziennik techniczny (stan połączeń, błędy), który pomaga
+    zdiagnozować problemy z łącznością. Leży on w katalogu aplikacji na Twoim urządzeniu
+    i <strong>nie jest nigdzie wysyłany automatycznie</strong>.</p>
+    <p>Możesz go wyeksportować i przesłać nam samodzielnie z ekranu <em>Diagnostyka</em> —
+    dzieje się to wyłącznie z Twojej inicjatywy i pod Twoją kontrolą. Dziennik może zawierać
+    nazwy sieci Wi-Fi i nazwy wyświetlane uczestników; nie zawiera treści wiadomości.</p>
+
+    <h2>6. Dzieci</h2>
+    <p>Aplikacja nie jest kierowana do dzieci poniżej 13. roku życia i nie zbieramy
+    świadomie ich danych.</p>
+
+    <h2>7. Twoje prawa i usunięcie danych</h2>
+    <p>Ponieważ nie prowadzimy kont użytkowników i nie przechowujemy Twoich danych na
+    serwerach, <strong>nie ma konta, które można by usunąć</strong>, ani zbioru danych,
+    o którego kopię można by wystąpić.</p>
+    <p>Dane lokalne usuwasz, odinstalowując aplikację lub czyszcząc jej dane w ustawieniach
+    systemu.</p>
+    <p>Dane o zakupie znajdują się w RevenueCat i w Twoim koncie Google Play — w tych
+    sprawach kieruj się politykami tych usług.</p>
+
+    <h2>8. Zmiany polityki</h2>
+    <p>O istotnych zmianach poinformujemy przez opis aktualizacji w Google Play.
+    Data ostatniej zmiany widnieje na początku dokumentu.</p>
+
+    <h2>9. Kontakt</h2>
+    <p>W sprawach dotyczących prywatności:
+    <a href="mailto:kontakt@haskelar.pl">kontakt@haskelar.pl</a></p>
+  </div>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    AlwaysInTouch &middot; <a href="/">Strona główna</a> &middot;
+    <a href="/privacy/">English version</a>
+  </div>
+</footer>
+
+</body>
+</html>
