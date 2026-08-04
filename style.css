@@ -187,13 +187,13 @@ footer.site {
 footer.site a { color: var(--muted); }
 
 /* ==========================================================================
-   Strona główna — landing aplikacji.
+   Strona główna — wizytówka autora.
 
    Wszystko poniżej dotyczy WYŁĄCZNIE index.html i 404. Podstrony z polityką
    prywatności korzystają z klas powyżej i nie wolno ich ruszać: ich adresy
    są wpisane w Play Console, a treść jest dokumentem prawnym.
 
-   Szerokość zawartości rośnie tu do 62rem, bo siatka kafelków z funkcjami
+   Szerokość zawartości rośnie tu do 62rem, bo siatka kafelków z projektami
    potrzebuje więcej miejsca niż kolumna 46rem przeznaczona pod czytanie.
    ========================================================================== */
 
