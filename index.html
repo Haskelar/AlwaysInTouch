@@ -3,47 +3,164 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AlwaysInTouch</title>
-<meta name="description" content="AlwaysInTouch — komunikator działający bez serwera i bez internetu. Polityka prywatności po polsku i po angielsku.">
+<title>Haskelar — aplikacje, które działają bez internetu</title>
+<meta name="description" content="Buduję aplikacje mobilne działające offline i utrzymuję infrastrukturę, na której stoją. AlwaysInTouch — komunikator bez serwera. Tu znajdziesz wszystkie podstrony i polityki prywatności.">
 <link rel="canonical" href="https://haskelar.pl/">
 <link rel="stylesheet" href="/style.css">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔗</text></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛠️</text></svg>">
+<meta property="og:title" content="Haskelar — aplikacje, które działają bez internetu">
+<meta property="og:description" content="AlwaysInTouch: komunikator łączący telefony bezpośrednio ze sobą. Plus infrastruktura, na której to stoi.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pl_PL">
+<meta property="og:url" content="https://haskelar.pl/">
 </head>
-<body>
+<body class="glowna">
 
 <header class="site">
   <div class="wrap">
-    <a class="brand" href="/">AlwaysInTouch</a>
+    <a class="brand" href="/">haskelar.pl</a>
     <nav>
-      <a href="/polityka-prywatnosci/">Polityka prywatności</a>
-      <a href="/privacy/">Privacy Policy</a>
+      <a href="#projekty">Projekty</a>
+      <a href="#adresy">Adresy</a>
+      <a href="#kontakt">Kontakt</a>
     </nav>
   </div>
 </header>
 
 <main>
   <div class="wrap">
-    <h1>AlwaysInTouch</h1>
-    <p class="lead">Komunikator, który działa bez serwera, bez kont i bez internetu.
-    Telefony łączą się bezpośrednio ze sobą.</p>
 
-    <div class="card">
-      <p><strong>Polityka prywatności</strong><br>
-      <a href="/polityka-prywatnosci/">Wersja polska</a> &nbsp;·&nbsp;
-      <a href="/privacy/">English version</a></p>
-    </div>
+    <section class="hero">
+      <span class="kto">Haskelar</span>
+      <h1>Aplikacje, które działają, gdy nie ma zasięgu</h1>
+      <p class="lead">Buduję oprogramowanie mobilne pod założenie, że internetu
+      może po prostu nie być — i utrzymuję infrastrukturę, na której to stoi.
+      Wszystko, co publikuję, jest podpięte poniżej.</p>
+      <div class="hero-akcje">
+        <a class="przycisk mocny" href="https://ait.haskelar.pl/">Zobacz AlwaysInTouch</a>
+        <a class="przycisk" href="https://github.com/Haskelar">GitHub</a>
+        <a class="przycisk" href="mailto:kontakt@haskelar.pl">kontakt@haskelar.pl</a>
+      </div>
+    </section>
 
-    <h2>Kontakt</h2>
-    <p>W sprawach dotyczących prywatności i działania aplikacji:
-    <a href="mailto:kontakt@haskelar.pl">kontakt@haskelar.pl</a></p>
+    <h2 id="projekty">Projekty</h2>
+
+    <ul class="siatka">
+      <li class="szeroki">
+        <a class="kafel" href="https://ait.haskelar.pl/">
+          <span class="kafel-glowa">
+            <span class="kafel-tytul">AlwaysInTouch</span>
+            <span class="kafel-adres">ait.haskelar.pl</span>
+          </span>
+          <p>Komunikator, w którym telefony łączą się bezpośrednio ze sobą —
+          przez Wi-Fi w sieci lokalnej albo przez Bluetooth. Bez serwera, bez
+          kont i bez internetu. Do tego mapy offline, tłumacz i przewodnik
+          odpowiadający z cytatem ze źródła, wszystko liczone na urządzeniu.</p>
+        </a>
+      </li>
+    </ul>
+
+    <h2 id="adresy">Wszystkie adresy</h2>
+    <p>Każda podstrona ma własną subdomenę i własny serwer. To nie jest
+    upiększenie: awaria jednej nie ma prawa zabrać ze sobą pozostałych.</p>
+
+    <ul class="siatka">
+      <li>
+        <!-- Bez osobnego odnośnika do wersji angielskiej w środku: odnośnik
+             zagnieżdżony w odnośniku to niepoprawny HTML, a przeglądarki
+             rozwiązują to każda po swojemu. Przełącznik języka stoi na samej
+             stronie aplikacji, i tam jest jego miejsce. -->
+        <a class="kafel" href="https://ait.haskelar.pl/">
+          <span class="kafel-glowa">
+            <span class="kafel-tytul">Strona aplikacji</span>
+            <span class="kafel-adres">ait.haskelar.pl</span>
+          </span>
+          <p>Co AlwaysInTouch potrafi, czego nie potrafi i dlaczego.
+          Dostępna też po angielsku.</p>
+        </a>
+      </li>
+      <li>
+        <a class="kafel" href="https://dev.haskelar.pl/">
+          <span class="kafel-glowa">
+            <span class="kafel-tytul">Panel stanu</span>
+            <span class="znacznik zamkniety">za logowaniem</span>
+          </span>
+          <p>Czy wszystko działa: serwery, tunel, certyfikaty, kopie zapasowe
+          i paczki wiedzy. Dostęp wyłącznie dla właściciela.</p>
+        </a>
+      </li>
+      <li>
+        <a class="kafel" href="/polityka-prywatnosci/">
+          <span class="kafel-glowa">
+            <span class="kafel-tytul">Polityka prywatności</span>
+            <span class="kafel-adres">/polityka-prywatnosci/</span>
+          </span>
+          <p>Co aplikacja zbiera — a właściwie czego nie zbiera. Wersja polska.</p>
+        </a>
+      </li>
+      <li>
+        <a class="kafel" href="/privacy/">
+          <span class="kafel-glowa">
+            <span class="kafel-tytul" lang="en">Privacy Policy</span>
+            <span class="kafel-adres">/privacy/</span>
+          </span>
+          <p lang="en">The English version of the AlwaysInTouch privacy policy.</p>
+        </a>
+      </li>
+      <li>
+        <a class="kafel" href="https://support.haskelar.pl/">
+          <span class="kafel-glowa">
+            <span class="kafel-tytul">Wsparcie</span>
+            <span class="kafel-adres">support.haskelar.pl</span>
+          </span>
+          <p>Zgłoszenia i pytania dotyczące działania aplikacji.</p>
+        </a>
+      </li>
+      <li>
+        <a class="kafel" href="https://github.com/Haskelar">
+          <span class="kafel-glowa">
+            <span class="kafel-tytul">GitHub</span>
+            <span class="kafel-adres">github.com/Haskelar</span>
+          </span>
+          <p>Publiczne repozytoria. Kod aplikacji jest prywatny.</p>
+        </a>
+      </li>
+    </ul>
+
+    <h2>Na czym to stoi</h2>
+    <p>Strona, którą czytasz, i wszystko obok niej chodzi na sprzęcie, który
+    stoi u mnie. Poniżej jest to rozpisane, bo w takich decyzjach siedzi
+    właściwa treść tej strony.</p>
+
+    <ul class="stos">
+      <li><b>Aplikacja</b><span>Flutter, warstwa natywna w C++ na llama.cpp,
+        magazyn na Drifcie. Łączność bezpośrednia po Wi-Fi i BLE.</span></li>
+      <li><b>Przewodnik</b><span>Wyszukiwanie hybrydowe na paczkach zbudowanych
+        ze zrzutów Wikivoyage. Model odpowiada offline i podaje źródło.</span></li>
+      <li><b>Serwery</b><span>Proxmox, kontenery LXC. Strona aplikacji i panel
+        w Dockerze; osobny kontener przelicza paczki wiedzy.</span></li>
+      <li><b>Wystawienie</b><span>Cloudflare Tunnel — ani jeden port nie jest
+        otwarty na routerze. Panel dodatkowo za Cloudflare Access.</span></li>
+      <li><b>Paczki wiedzy</b><span>Cloudflare R2. Katalog jest podpisany
+        kluczem, który nigdy nie trafia na serwer ani do CI.</span></li>
+      <li><b>Wdrożenie</b><span>Ta strona z GitHub Pages, podstrony przez
+        <code>git pull</code> co minutę. Bez ręcznego wgrywania plików.</span></li>
+    </ul>
+
+    <h2 id="kontakt">Kontakt</h2>
+    <p>W sprawach prywatności, działania aplikacji i wszystkiego innego:
+    <a href="mailto:kontakt@haskelar.pl">kontakt@haskelar.pl</a>.</p>
+
   </div>
 </main>
 
 <footer class="site">
   <div class="wrap">
-    AlwaysInTouch &middot;
+    haskelar.pl &middot;
+    <a href="https://ait.haskelar.pl/">AlwaysInTouch</a> &middot;
     <a href="/polityka-prywatnosci/">Polityka prywatności</a> &middot;
-    <a href="/privacy/">Privacy Policy</a>
+    <a href="/privacy/">Privacy Policy</a> &middot;
+    <a href="https://github.com/Haskelar">GitHub</a>
   </div>
 </footer>
 

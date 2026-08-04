@@ -185,3 +185,166 @@ footer.site {
 }
 
 footer.site a { color: var(--muted); }
+
+/* ==========================================================================
+   Strona główna — wizytówka i rozdzielnia.
+
+   Wszystko poniżej dotyczy WYŁĄCZNIE index.html i 404. Podstrony z polityką
+   prywatności korzystają z klas powyżej i nie wolno ich ruszać: ich adresy
+   są wpisane w Play Console, a treść jest dokumentem prawnym.
+
+   Szerokość zawartości rośnie tu do 62rem, bo rozdzielnia to siatka kafelków,
+   a nie tekst do czytania — kolumna 46rem od artykułu byłaby dla niej za wąska.
+   ========================================================================== */
+
+body.glowna .wrap { max-width: 62rem; }
+
+/* ---------------------------------------------------------------- nagłówek */
+
+.hero { padding: 3.2rem 0 0.4rem; }
+
+.hero .kto {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 650;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.9rem;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 6vw, 3rem);
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  margin: 0 0 0.8rem;
+  max-width: 20ch;
+}
+
+.hero .lead {
+  font-size: clamp(1.02rem, 2.2vw, 1.16rem);
+  max-width: 56ch;
+  margin-bottom: 1.6rem;
+}
+
+.hero-akcje { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+
+.przycisk {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;          /* cel dotykowy — WCAG 2.5.5 */
+  padding: 0.5rem 1.1rem;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  background: var(--card);
+  color: var(--fg);
+  font-size: 0.94rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.przycisk:hover { border-color: var(--accent); color: var(--accent); }
+
+.przycisk.mocny {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.przycisk.mocny:hover { opacity: 0.9; color: #fff; }
+
+/* ---------------------------------------------------------------- kafelki */
+
+.siatka {
+  display: grid;
+  gap: 0.85rem;
+  grid-template-columns: 1fr;
+  margin: 1.1rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Elementem siatki jest <li>, więc klasa układu musi siedzieć na nim, a nie
+   na kafelku w środku. `display: flex` plus `flex: 1` wyrównuje wysokości
+   w wierszu — bez tego dwa kafelki obok siebie mają różną wysokość i siatka
+   wygląda na rozjechaną. */
+.siatka > li { display: flex; }
+.siatka > li > .kafel { flex: 1; }
+
+@media (min-width: 40rem) {
+  .siatka { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .siatka > li.szeroki { grid-column: 1 / -1; }
+}
+
+.kafel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding: 1.05rem 1.15rem;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--card);
+  text-decoration: none;
+  color: inherit;
+}
+
+a.kafel:hover { border-color: var(--accent); }
+
+.kafel-glowa {
+  display: flex;
+  align-items: baseline;
+  gap: 0.55rem;
+  flex-wrap: wrap;
+}
+
+.kafel-tytul { font-weight: 660; font-size: 1rem; letter-spacing: -0.01em; }
+a.kafel:hover .kafel-tytul { color: var(--accent); }
+
+.kafel-adres {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+.kafel p { margin: 0; color: var(--muted); font-size: 0.92rem; line-height: 1.5; }
+
+.znacznik {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.15rem 0.45rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.znacznik.zamkniety { border-color: var(--accent); color: var(--accent); }
+
+/* ------------------------------------------------------------------ stos */
+
+.stos { margin: 1.1rem 0 0; padding: 0; list-style: none; }
+
+.stos li {
+  display: flex;
+  gap: 1rem;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 0.94rem;
+  margin: 0;
+}
+
+.stos li:last-child { border-bottom: 0; }
+
+.stos b {
+  flex: 0 0 9.5rem;
+  font-weight: 600;
+}
+
+.stos span { color: var(--muted); }
+
+@media (max-width: 34rem) {
+  .stos li { flex-direction: column; gap: 0.15rem; }
+  .stos b { flex: none; }
+}
